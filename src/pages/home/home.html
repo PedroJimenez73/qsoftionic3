@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+     <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<div text-center>
+  <h2>Inicio</h2>
+</div>
+<div text-center>
+  <button ion-button class="blue" (click)="goToPlanes()">Planes de Auditoría</button>
+</div>
+<div text-center>
+  <button ion-button class="green">Legislación Medioambiental</button>
+</div>
+<div text-center>
+  <button ion-button class="orange">Sistema de Gestión Integrado</button>
+</div>
+<div text-center>
+  <button ion-button class="red" (click)="goToMapa()">Mapa de Procesos</button>
+</div>
+<div text-center>
+  <button ion-button class="violet">Recursos Humanos</button>
+</div>
+<div text-center>
+  <button ion-button class="pink">Indicadores</button>
+</div>
+<div text-center>
+  <button ion-button class="greenlight">Riesgos</button>
+</div>
+<div text-center>
+  <button ion-button class="orangedark">No Conformidades</button>
+</div>
+<div text-center>
+  <button ion-button class="bluelight">Acciones de Mejora</button>
+</div>
+<div text-center>
+  <button ion-button class="green">Clientes</button>
+</div>
+<div text-center>
+  <button ion-button class="red">Reclamaciones de Clientes</button>
+</div>
+
+
+</ion-content>

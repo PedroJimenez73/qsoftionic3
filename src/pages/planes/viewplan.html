@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Detalles Plan de Auditoría</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+        Fecha: {{plan.fecha}}
+      </ion-item>
+      <ion-item>
+        Alcance: {{plan.alcance}}
+      </ion-item>
+      <ion-item>
+        Objeto: {{plan.objeto}}
+      </ion-item>
+      <ion-item>
+        Responsable: {{plan.responsable}}
+      </ion-item>
+      <ion-item>
+        Documentación: {{plan.documentacion}}
+      </ion-item>
+      <ion-item>
+        Sistemática: {{plan.sistematica}}
+      </ion-item>
+
+  </ion-list>
+  
+</ion-content>
+

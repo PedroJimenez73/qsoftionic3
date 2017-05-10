@@ -1,0 +1,22 @@
+<ion-menu persistent="true" [content]="content">
+
+  <ion-header>
+    <ion-toolbar>
+      <div text-center>
+        <img src="assets/img/LogotipoBarra.png" alt="Logotipo">
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+

@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-title>Editar Curso {{curso.titulo}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+ 
+    <ion-item>
+      <ion-label floating>Título</ion-label>
+      <ion-input [(ngModel)]="curso.titulo" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Organizador</ion-label>
+      <ion-input [(ngModel)]="curso.organizador" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Horas</ion-label>
+      <ion-input [(ngModel)]="curso.horas" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Asistentes</ion-label>
+      <ion-input [(ngModel)]="curso.asistentes" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Fechas</ion-label>
+      <ion-input [(ngModel)]="curso.fechas" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Observaciones</ion-label>
+      <ion-input [(ngModel)]="curso.observaciones" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Fecha Ult. Modif.</ion-label>
+      <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="curso.fechamodif"></ion-datetime>
+    </ion-item>
+
+
+ 
+ 
+  </ion-list>
+ 
+  <button ion-button (click)="save()">Guardar</button>
+  
+</ion-content>

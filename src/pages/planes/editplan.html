@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-title>Editar Plan de Auditoría</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+ 
+    <ion-item>
+      <ion-label floating>Fecha</ion-label>
+      <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="plan.fecha"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label floating>Alcance</ion-label>
+      <ion-input [(ngModel)]="plan.alcance" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Objeto</ion-label>
+      <ion-input [(ngModel)]="plan.objeto" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Responsable</ion-label>
+      <ion-input [(ngModel)]="plan.responsable" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Documentación</ion-label>
+      <ion-input [(ngModel)]="plan.documentacion" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Sistemática</ion-label>
+      <ion-input [(ngModel)]="plan.sistematica" type="text"></ion-input>
+    </ion-item>
+  
+  </ion-list>
+ 
+  <button ion-button (click)="save()">Guardar</button>
+  
+</ion-content>

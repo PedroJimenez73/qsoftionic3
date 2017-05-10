@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title> Planes de Auditoría</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addPlan()"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content center>
+ 
+    <ion-card *ngFor="let plan of planes" text-center>
+ 
+      <ion-card-header>
+  
+        <h1>{{plan.alcance}}</h1>
+  
+      </ion-card-header>
+      <ion-card-content>
+          <button ion-button icon-only (click)="viewPlan(plan)"><ion-icon name="eye"></ion-icon></button>
+          <button ion-button icon-only color="secondary" (click)="editPlan(plan)"><ion-icon name="paper"></ion-icon></button>
+          <button ion-button icon-only color="danger" (click)="deletePlan(plan)"><ion-icon name="trash"></ion-icon></button>
+      </ion-card-content>
+ 
+
+    </ion-card>
+ 
+</ion-content>

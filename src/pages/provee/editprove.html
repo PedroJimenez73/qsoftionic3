@@ -1,0 +1,81 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-title>Editar {{prove.nombre}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list no-lines>
+ 
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input [(ngModel)]="prove.nombre" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Producto/Servicio</ion-label>
+      <ion-input [(ngModel)]="prove.servicio" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>CIF</ion-label>
+      <ion-input [(ngModel)]="prove.cif" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Dirección</ion-label>
+      <ion-input [(ngModel)]="prove.direccion" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Teléfono</ion-label>
+      <ion-input [(ngModel)]="prove.telefono" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Persona de contacto</ion-label>
+      <ion-input [(ngModel)]="prove.persona" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Mail</ion-label>
+      <ion-input [(ngModel)]="prove.mail" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Forma de pago</ion-label>
+      <ion-input [(ngModel)]="prove.pago" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>No conformidad</ion-label>
+      <ion-input [(ngModel)]="prove.nc" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Evaluación/Reevaluación</ion-label>
+        <ion-select [(ngModel)]="prove.eval">
+            <ion-option value="evaluacion">Evaluación</ion-option>
+            <ion-option value="reevaluacion">Revaluación</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Fecha Ult. Modif.</ion-label>
+      <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="prove.fechamodif"></ion-datetime>
+    </ion-item>
+
+
+ 
+ 
+  </ion-list>
+ 
+  <button ion-button (click)="save()">Guardar</button>
+  
+</ion-content>

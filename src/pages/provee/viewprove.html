@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-title>Detalles {{prove.nombre}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+        Nombre: {{prove.nombre}}
+      </ion-item>
+      <ion-item>
+        Producto/Servicio: {{prove.servicio}}
+      </ion-item>
+      <ion-item>
+        CIF: {{prove.cif}}
+      </ion-item>
+      <ion-item>
+        Dirección: {{prove.direccion}}
+      </ion-item>
+      <ion-item>
+        Teléfono: {{prove.telefono}}
+      </ion-item>
+      <ion-item>
+        Persona de Contacto: {{prove.persona}}
+      </ion-item>
+      <ion-item>
+        Mail: {{prove.mail}}
+      </ion-item>
+      <ion-item>
+        Forma de Pago: {{prove.pago}}
+      </ion-item>
+      <ion-item>
+        No Conformidad: {{prove.nc}}
+      </ion-item>
+      <ion-item>
+        Eval./Reev.: {{prove.eval}}
+      </ion-item>
+      <ion-item>
+        Fecha Ult. Modif.: {{prove.fechamodif}}
+      </ion-item>
+
+  </ion-list>
+  
+</ion-content>
+
