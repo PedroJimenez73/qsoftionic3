@@ -5,6 +5,7 @@ import { AuthService } from '../../providers/auth-service';
 import { LoginPage } from '../login/login';
 import { MapaPage } from "../mapa/mapa";
 import { PlanesPage } from "../planes/planes";
+import { MedioambPage } from "../medioamb/medioamb";
 
 
 @Component({
@@ -79,5 +80,9 @@ export class HomePage {
 
   goToPlanes() {
     this.nav.push(PlanesPage);
+  }
+
+  goToDocs() {
+    this.nav.push(MedioambPage);
   }
 }

@@ -36,6 +36,8 @@ import { PlanesPage } from "../pages/planes/planes";
 import { AddPlanPage } from "../pages/planes/addplan";
 import { EditPlanPage } from "../pages/planes/editplan";
 import { ViewPlanPage } from "../pages/planes/viewplan";
+import { MedioambPage } from "../pages/medioamb/medioamb";
+import { Docs } from "../providers/docs";
 
 
 let storage = new Storage();
@@ -80,7 +82,8 @@ const cloudSettings: CloudSettings = {
     PlanesPage,
     AddPlanPage,
     EditPlanPage,
-    ViewPlanPage
+    ViewPlanPage,
+    MedioambPage
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -109,7 +112,8 @@ const cloudSettings: CloudSettings = {
     PlanesPage,
     AddPlanPage,
     EditPlanPage,
-    ViewPlanPage
+    ViewPlanPage,
+    MedioambPage
   ],
   providers: [
     StatusBar,
@@ -117,6 +121,7 @@ const cloudSettings: CloudSettings = {
     Cursos,
     Proves,
     Planes,
+    Docs,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     {
