@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
 import { RegisterPage } from '../register/register';
-import { HomePage } from '../home/home';
+import { IonicPage } from 'ionic-angular';
+
+
+@IonicPage()
 
 @Component({
   selector: 'page-login',
@@ -26,9 +29,10 @@ export class LoginPage {
     this.auth.login(this.registerCredentials).subscribe(data => {
       if (data !== '') {
         this.loading.dismiss();
-        this.nav.setRoot(HomePage)
+        this.nav.setRoot('HomePage');
+        //this.nav.push('HomePage');
       } else {
-        this.showError("Access Denied");
+        this.showError("Aceso Denegado");
       }
     },
     error => {
@@ -47,7 +51,7 @@ export class LoginPage {
       this.loading.dismiss();
 
     let alert = this.alertCtrl.create({
-      title: 'Fail',
+      title: 'Error',
       message: text,
       buttons: ['OK']
     });

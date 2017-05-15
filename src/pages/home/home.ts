@@ -1,13 +1,11 @@
 import { DetailsPage } from './../details/details';
 import {Component} from '@angular/core';
-import {NavController, AlertController, ToastController} from 'ionic-angular';
+import { IonicPage, NavController, AlertController, ToastController} from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
 import { LoginPage } from '../login/login';
-import { MapaPage } from "../mapa/mapa";
-import { PlanesPage } from "../planes/planes";
 import { MedioambPage } from "../medioamb/medioamb";
 
-
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -75,11 +73,11 @@ export class HomePage {
     alert.present(prompt);
   }
   goToMapa() {
-    this.nav.push(MapaPage);
+    this.nav.push('MapaPage');
   }
 
   goToPlanes() {
-    this.nav.push(PlanesPage);
+    this.nav.push('PlanesPage');
   }
 
   goToDocs() {

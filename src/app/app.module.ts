@@ -2,8 +2,8 @@ import { DetailsPage } from './../pages/details/details';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
+import { BrowserModule } from '@angular/platform-browser';
+
 import { AuthService } from '../providers/auth-service';
 import { RegisterPage } from '../pages/register/register';
 
@@ -14,6 +14,7 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { AuthHttp, AuthConfig } from 'angular2-jwt';
 import { Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
 import { Storage } from '@ionic/storage';
 
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
@@ -29,11 +30,8 @@ import { Proves } from "../providers/proves";
 import { Cursos } from "../providers/cursos";
 import { PlanifPage } from "../pages/planificacion/planif";
 import { RiesgosPage } from "../pages/riesgos/riesgos";
-import { MapaPage } from "../pages/mapa/mapa";
 import { ApoyoPage } from "../pages/apoyo/apoyo";
 import { Planes } from "../providers/planes";
-import { PlanesPage } from "../pages/planes/planes";
-import { AddPlanPage } from "../pages/planes/addplan";
 import { EditPlanPage } from "../pages/planes/editplan";
 import { ViewPlanPage } from "../pages/planes/viewplan";
 import { MedioambPage } from "../pages/medioamb/medioamb";
@@ -63,8 +61,6 @@ const cloudSettings: CloudSettings = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    LoginPage,
     RegisterPage,
     DetailsPage,
     CursosPage,
@@ -77,24 +73,22 @@ const cloudSettings: CloudSettings = {
     ViewProvePage,
     PlanifPage,
     RiesgosPage,
-    MapaPage,
     ApoyoPage,
-    PlanesPage,
-    AddPlanPage,
     EditPlanPage,
     ViewPlanPage,
     MedioambPage
   ],
   imports: [
+    BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
     CloudModule.forRoot(cloudSettings)
   ],
+  
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    LoginPage,
     RegisterPage,
     DetailsPage,
     CursosPage,
@@ -107,10 +101,7 @@ const cloudSettings: CloudSettings = {
     ViewProvePage,
     PlanifPage,
     RiesgosPage,
-    MapaPage,
     ApoyoPage,
-    PlanesPage,
-    AddPlanPage,
     EditPlanPage,
     ViewPlanPage,
     MedioambPage

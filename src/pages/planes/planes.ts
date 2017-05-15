@@ -1,11 +1,10 @@
 import { Component } from "@angular/core";
-import { NavController, ModalController } from 'ionic-angular';
+import {  IonicPage, NavController, ModalController } from 'ionic-angular';
 import { Planes } from "../../providers/planes";
 import { ViewPlanPage } from "./viewplan";
-import { AddPlanPage } from "./addplan";
 import { EditPlanPage } from "./editplan";
 
-
+@IonicPage()
 @Component({
   selector: 'page-planes',
   templateUrl: 'planes.html'
@@ -33,7 +32,7 @@ export class PlanesPage {
 
   addPlan(){
  
-    let modal = this.modalCtrl.create(AddPlanPage);
+    let modal = this.modalCtrl.create('AddPlanPage');
  
     modal.onDidDismiss(plan => {
       if(plan){
