@@ -17,17 +17,17 @@
 
 <ion-content center>
  
-    <ion-card *ngFor="let plan of planes" text-center>
+    <ion-card *ngFor="let plane of planes" text-center>
  
       <ion-card-header>
   
-        <h1>{{plan.alcance}}</h1>
+        <h1>{{plane.alcance}}</h1>
   
       </ion-card-header>
       <ion-card-content>
-          <button ion-button icon-only (click)="viewPlan(plan)"><ion-icon name="eye"></ion-icon></button>
-          <button ion-button icon-only color="secondary" (click)="editPlan(plan)"><ion-icon name="paper"></ion-icon></button>
-          <button ion-button icon-only color="danger" (click)="deletePlan(plan)"><ion-icon name="trash"></ion-icon></button>
+          <button ion-button icon-only (click)="viewPlan(plane)"><ion-icon name="eye"></ion-icon></button>
+          <button ion-button icon-only color="secondary" (click)="editPlan(plane)"><ion-icon name="paper"></ion-icon></button>
+          <button ion-button icon-only color="danger" (click)="deletePlan(plane)"><ion-icon name="trash"></ion-icon></button>
       </ion-card-content>
  
 

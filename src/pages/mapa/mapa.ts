@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, ModalController } from 'ionic-angular';
-import { ApoyoPage } from "../apoyo/apoyo";
 
 @IonicPage()
 @Component({
@@ -14,7 +13,10 @@ export class MapaPage {
   
   }
   goToApoyo() {
-    this.nav.push(ApoyoPage);
+    this.nav.push('ApoyoPage');
+  }
+  goToPlanif() {
+    this.nav.push('PlanifPage');
   }
  
 

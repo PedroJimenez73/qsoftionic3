@@ -21,7 +21,7 @@ export class AddPlanPage {
  
   save(): void {
  
-    let plan = {
+    let plane = {
       fecha: this.fecha,
       alcance: this.alcance,
       objeto: this.objeto,
@@ -30,7 +30,7 @@ export class AddPlanPage {
       sistematica: this.sistematica
     };
  
-    this.viewCtrl.dismiss(plan);
+    this.viewCtrl.dismiss(plane);
  
   }
  

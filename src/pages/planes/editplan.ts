@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { Planes } from "../../providers/planes";
 
+@IonicPage()
 @Component({
   selector: 'page-editplan',
   templateUrl: 'editplan.html'
 })
 export class EditPlanPage {
  
-  plan: any;
+  plane: any;
   _id: any;
   fecha: any;
   alcance: any;
@@ -18,7 +19,7 @@ export class EditPlanPage {
   sistematica: any;
 
   constructor(public nav: NavController, public planService: Planes, public navParams: NavParams, public viewCtrl: ViewController) {
-     this.plan = navParams.get('plan');
+     this.plane = navParams.get('plane');
      /*this.curso.titulo = navParams.get('curso.titulo');
      this.curso.organizador = navParams.get('curso.organizador');
      this.curso.horas = navParams.get('curso.horas');
@@ -31,17 +32,17 @@ export class EditPlanPage {
 
   save(): void {
  
-    let plan = {
-      id: this.plan._id,
-      fecha: this.plan.fecha,
-      alcance: this.plan.alcance,
-      objeto: this.plan.objeto,
-      responsable: this.plan.responsable,
-      documentacion: this.plan.documentacion,
-      sistematica: this.plan.sistematica
+    let plane = {
+      id: this.plane._id,
+      fecha: this.plane.fecha,
+      alcance: this.plane.alcance,
+      objeto: this.plane.objeto,
+      responsable: this.plane.responsable,
+      documentacion: this.plane.documentacion,
+      sistematica: this.plane.sistematica
     };
   
-    this.planService.updatePlan(plan);
+    this.planService.updatePlan(plane);
 
     this.viewCtrl.dismiss();
     

@@ -1,8 +1,7 @@
 import { Component } from "@angular/core";
-import { NavController, ModalController } from 'ionic-angular';
-import { CursosPage } from "../cursos/cursos";
+import { IonicPage, NavController, ModalController } from 'ionic-angular';
 
-
+@IonicPage()
 @Component({
   selector: 'page-apoyo',
   templateUrl: 'apoyo.html'
@@ -14,7 +13,7 @@ export class ApoyoPage {
   
   }
   goToCursos() {
-    this.nav.push(CursosPage);
+    this.nav.push('CursosPage');
   }
  
 

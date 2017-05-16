@@ -1,11 +1,9 @@
 import { Component } from "@angular/core";
-import { NavController, ModalController } from 'ionic-angular';
-import { ViewCursoPage } from '../cursos/viewcurso';
-import { AddCursoPage} from '../cursos/addcurso';
-import { EditCursoPage } from '../cursos/editcurso';
+import { IonicPage, NavController, ModalController } from 'ionic-angular';
 
 import { Cursos } from '../../providers/cursos';
 
+@IonicPage()
 @Component({
   selector: 'page-cursos',
   templateUrl: 'cursos.html'
@@ -30,7 +28,7 @@ export class CursosPage {
  
 
   viewCurso(curso){
-    this.nav.push(ViewCursoPage, {curso: curso});
+    this.nav.push('ViewCursoPage', {curso: curso});
   }
 
 
@@ -38,7 +36,7 @@ export class CursosPage {
 
   addCurso(){
  
-    let modal = this.modalCtrl.create(AddCursoPage);
+    let modal = this.modalCtrl.create('AddCursoPage');
  
     modal.onDidDismiss(curso => {
       if(curso){
@@ -52,7 +50,7 @@ export class CursosPage {
   }
 
   editCurso(curso){
-    this.nav.push(EditCursoPage, {curso: curso});
+    this.nav.push('EditCursoPage', {curso: curso});
   }
 
 

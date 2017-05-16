@@ -1,9 +1,7 @@
-import { DetailsPage } from './../details/details';
 import {Component} from '@angular/core';
 import { IonicPage, NavController, AlertController, ToastController} from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
 import { LoginPage } from '../login/login';
-import { MedioambPage } from "../medioamb/medioamb";
 
 @IonicPage()
 @Component({
@@ -42,9 +40,9 @@ export class HomePage {
     });
   }
 
-  // Push the details page
+  //Push the details page
   goToDetails() {
-    this.nav.push(DetailsPage)
+    this.nav.push('DetailsPage')
     .catch((err) => {
       this.showForceLogoutInfo();
     });
@@ -81,6 +79,14 @@ export class HomePage {
   }
 
   goToDocs() {
-    this.nav.push(MedioambPage);
+    this.nav.push('MedioambPage');
+  }
+
+  goToSgi() {
+    this.nav.push('SgiPage');
+  }
+
+  goToIndicadores() {
+    this.nav.push('IndicadoresPage');
   }
 }

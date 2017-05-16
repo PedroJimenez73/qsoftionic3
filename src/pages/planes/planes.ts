@@ -1,8 +1,6 @@
 import { Component } from "@angular/core";
 import {  IonicPage, NavController, ModalController } from 'ionic-angular';
 import { Planes } from "../../providers/planes";
-import { ViewPlanPage } from "./viewplan";
-import { EditPlanPage } from "./editplan";
 
 @IonicPage()
 @Component({
@@ -26,18 +24,18 @@ export class PlanesPage {
  
   }
   
-  viewPlan(plan){
-    this.nav.push(ViewPlanPage, {plan: plan});
+  viewPlan(plane){
+    this.nav.push('ViewPlanPage', {plane: plane});
   }
 
   addPlan(){
  
     let modal = this.modalCtrl.create('AddPlanPage');
  
-    modal.onDidDismiss(plan => {
-      if(plan){
-        this.planes.push(plan);
-        this.planService.createPlan(plan);        
+    modal.onDidDismiss(plane => {
+      if(plane){
+        this.planes.push(plane);
+        this.planService.createPlan(plane);        
       }
     });
  
@@ -45,21 +43,21 @@ export class PlanesPage {
  
   }
 
-  editPlan(plan){
-    this.nav.push(EditPlanPage, {plan: plan});
+  editPlan(plane){
+    this.nav.push('EditPlanPage', {plane: plane});
   }
 
-  deletePlan(plan){
+  deletePlan(plane){
  
     //Remove locally
-      let index = this.planes.indexOf(plan);
+      let index = this.planes.indexOf(plane);
  
       if(index > -1){
         this.planes.splice(index, 1);
       }   
  
     //Remove from database
-    this.planService.deletePlan(plan._id);
+    this.planService.deletePlan(plane._id);
   }
 
 }

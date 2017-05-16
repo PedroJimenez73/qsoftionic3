@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Detalles Indicador</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+        Indicador: {{indicadore.indicador}}
+      </ion-item>
+      <ion-item>
+        Riesgo: {{indicadore.riesgo}}
+      </ion-item>
+      <ion-item>
+        Responsable: {{indicadore.responsable}}
+      </ion-item>
+      <ion-item>
+        Formula: {{indicadore.formula}}
+      </ion-item>
+      <ion-item>
+        Proceso: {{indicadore.proceso}}
+      </ion-item>
+      <ion-item>
+        Superior: {{indicadore.superior}}
+      </ion-item>
+      <ion-item>
+        Inferior: {{indicadore.inferior}}
+      </ion-item>
+      <ion-item>
+        Inicio: {{indicadore.inicio}}
+      </ion-item>      
+      <ion-item>
+        Fín: {{indicadore.fin}}
+      </ion-item>
+
+  </ion-list>
+  
+</ion-content>

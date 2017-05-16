@@ -19,7 +19,7 @@ export class Planes {
  
     return new Promise(resolve => {
  
-      this.http.get('http://ec2-52-33-205-92.us-west-2.compute.amazonaws.com:3000/api/plans')
+      this.http.get('http://ec2-52-33-205-92.us-west-2.compute.amazonaws.com:3000/api/planes')
         .map(res => res.json())
         .subscribe(data => {
           this.data = data;
@@ -29,25 +29,25 @@ export class Planes {
  
   }
  
-  createPlan(plan){
+  createPlan(plane){
  
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
  
-    this.http.post('http://ec2-52-33-205-92.us-west-2.compute.amazonaws.com:3000/api/plans', JSON.stringify(plan), {headers: headers})
+    this.http.post('http://ec2-52-33-205-92.us-west-2.compute.amazonaws.com:3000/api/planes', JSON.stringify(plane), {headers: headers})
       .subscribe(res => {
         console.log(res.json());
       });
  
   }
 
-  updatePlan(plan){
+  updatePlan(plane){
 
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    let id = plan.id;
+    let id = plane.id;
  
-    this.http.put('http://ec2-52-33-205-92.us-west-2.compute.amazonaws.com:3000/api/plans/' + id, JSON.stringify(plan), {headers: headers})
+    this.http.put('http://ec2-52-33-205-92.us-west-2.compute.amazonaws.com:3000/api/planes/' + id, JSON.stringify(plane), {headers: headers})
       .subscribe(res => {
         console.log(res.json());
       });  
@@ -56,7 +56,7 @@ export class Planes {
  
   deletePlan(id){
  
-    this.http.delete('http://ec2-52-33-205-92.us-west-2.compute.amazonaws.com:3000/api/plans/' + id).subscribe((res) => {
+    this.http.delete('http://ec2-52-33-205-92.us-west-2.compute.amazonaws.com:3000/api/planes/' + id).subscribe((res) => {
       console.log(res.json());
     });    
  

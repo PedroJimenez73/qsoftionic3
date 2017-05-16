@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
-import { NavController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController } from 'ionic-angular';
 import { Docs } from "../../providers/docs";
 
 
-
+@IonicPage()
 @Component({
   selector: 'page-medioamb',
   templateUrl: 'medioamb.html'

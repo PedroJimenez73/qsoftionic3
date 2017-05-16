@@ -1,11 +1,9 @@
-import { DetailsPage } from './../pages/details/details';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AuthService } from '../providers/auth-service';
-import { RegisterPage } from '../pages/register/register';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,24 +16,17 @@ import { HttpModule } from '@angular/http';
 import { Storage } from '@ionic/storage';
 
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
-import { CursosPage } from "../pages/cursos/cursos";
-import { ViewCursoPage } from "../pages/cursos/viewcurso";
-import { AddCursoPage } from "../pages/cursos/addcurso";
-import { EditCursoPage } from "../pages/cursos/editcurso";
 import { ProvesPage } from "../pages/provee/provees";
 import { AddProvePage } from "../pages/provee/addprove";
 import { EditProvePage } from "../pages/provee/editprove";
 import { ViewProvePage } from "../pages/provee/viewprove";
 import { Proves } from "../providers/proves";
 import { Cursos } from "../providers/cursos";
-import { PlanifPage } from "../pages/planificacion/planif";
 import { RiesgosPage } from "../pages/riesgos/riesgos";
-import { ApoyoPage } from "../pages/apoyo/apoyo";
 import { Planes } from "../providers/planes";
-import { EditPlanPage } from "../pages/planes/editplan";
-import { ViewPlanPage } from "../pages/planes/viewplan";
-import { MedioambPage } from "../pages/medioamb/medioamb";
 import { Docs } from "../providers/docs";
+import { Indicadores } from "../providers/indicadores";
+
 
 
 let storage = new Storage();
@@ -61,22 +52,11 @@ const cloudSettings: CloudSettings = {
 @NgModule({
   declarations: [
     MyApp,
-    RegisterPage,
-    DetailsPage,
-    CursosPage,
-    ViewCursoPage,
-    AddCursoPage,
-    EditCursoPage,
     ProvesPage,
     AddProvePage,
     EditProvePage,
     ViewProvePage,
-    PlanifPage,
-    RiesgosPage,
-    ApoyoPage,
-    EditPlanPage,
-    ViewPlanPage,
-    MedioambPage
+    RiesgosPage
   ],
   imports: [
     BrowserModule,
@@ -89,22 +69,11 @@ const cloudSettings: CloudSettings = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    RegisterPage,
-    DetailsPage,
-    CursosPage,
-    ViewCursoPage,
-    AddCursoPage,
-    EditCursoPage,
     ProvesPage,
     AddProvePage,
     EditProvePage,
     ViewProvePage,
-    PlanifPage,
-    RiesgosPage,
-    ApoyoPage,
-    EditPlanPage,
-    ViewPlanPage,
-    MedioambPage
+    RiesgosPage
   ],
   providers: [
     StatusBar,
@@ -113,6 +82,7 @@ const cloudSettings: CloudSettings = {
     Proves,
     Planes,
     Docs,
+    Indicadores,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     {

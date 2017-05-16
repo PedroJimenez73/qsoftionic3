@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { Cursos } from '../../providers/cursos';
- 
+
+@IonicPage()
 @Component({
   selector: 'page-editcurso',
   templateUrl: 'editcurso.html'
