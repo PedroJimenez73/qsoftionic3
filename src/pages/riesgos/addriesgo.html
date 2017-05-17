@@ -1,0 +1,45 @@
+<ion-header>
+ <ion-toolbar hideBackButton>
+  <ion-title>Nuevo Riesgo</ion-title>
+  <ion-buttons end>
+    <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+  </ion-buttons>
+ </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+ 
+  <ion-list no-lines>
+ 
+    <ion-item>
+      <ion-label floating>Proceso</ion-label>
+      <ion-input [(ngModel)]="proceso" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label>Responsable</ion-label>
+      <ion-select [(ngModel)]="responsable">
+        <ion-option *ngFor="let user of users" value= "{{user.username}}">{{user.username}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Riesgo</ion-label>
+      <ion-input [(ngModel)]="riesgo" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Oportunidad</ion-label>
+      <ion-input [(ngModel)]="oportunidad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Control</ion-label>
+      <ion-input [(ngModel)]="control" type="text"></ion-input>
+    </ion-item>
+
+  </ion-list>
+ 
+  <button ion-button (click)="save()">Guardar</button>
+ 
+</ion-content>

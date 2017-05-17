@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Detalles Riesgo</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+        Proceso: {{riesgo.proceso}}
+      </ion-item>
+      <ion-item>
+        Responsable: {{riesgo.responsable}}
+      </ion-item>
+      <ion-item>
+        Riesgo: {{riesgo.riesgo}}
+      </ion-item>
+      <ion-item>
+        Oportunidad: {{riesgo.oportunidad}}
+      </ion-item>
+      <ion-item>
+        Control: {{riesgo.control}}
+      </ion-item>
+  </ion-list>
+  
+</ion-content>
+

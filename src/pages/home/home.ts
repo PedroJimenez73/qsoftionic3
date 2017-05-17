@@ -89,4 +89,10 @@ export class HomePage {
   goToIndicadores() {
     this.nav.push('IndicadoresPage');
   }
+  goToRiesgos() {
+    this.nav.push('RiesgosPage');
+  }
+  goToNoconfs() {
+    this.nav.push('NoconfsPage');
+  }
 }

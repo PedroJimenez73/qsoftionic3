@@ -22,7 +22,6 @@ import { EditProvePage } from "../pages/provee/editprove";
 import { ViewProvePage } from "../pages/provee/viewprove";
 import { Proves } from "../providers/proves";
 import { Cursos } from "../providers/cursos";
-import { RiesgosPage } from "../pages/riesgos/riesgos";
 import { Planes } from "../providers/planes";
 import { Docs } from "../providers/docs";
 import { Indicadores } from "../providers/indicadores";
@@ -30,6 +29,8 @@ import { Users } from "../providers/users";
 import { Products } from "../providers/products";
 import { Internos } from "../providers/internos";
 import { Procesos } from "../providers/procesos";
+import { Riesgos } from "../providers/riesgos";
+import { Noconfs } from "../providers/noconfs";
 
 
 
@@ -59,8 +60,7 @@ const cloudSettings: CloudSettings = {
     ProvesPage,
     AddProvePage,
     EditProvePage,
-    ViewProvePage,
-    RiesgosPage
+    ViewProvePage
   ],
   imports: [
     BrowserModule,
@@ -76,8 +76,7 @@ const cloudSettings: CloudSettings = {
     ProvesPage,
     AddProvePage,
     EditProvePage,
-    ViewProvePage,
-    RiesgosPage
+    ViewProvePage
   ],
   providers: [
     StatusBar,
@@ -91,6 +90,8 @@ const cloudSettings: CloudSettings = {
     Products,
     Internos,
     Procesos,
+    Riesgos,
+    Noconfs,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     {

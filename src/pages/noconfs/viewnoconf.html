@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Detalles No Conformidad</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+        Nº: {{noconf.numero}}
+      </ion-item>
+        <ion-item>
+        Fecha: {{noconf.fecha}}
+      </ion-item>
+      <ion-item>
+        Tipo: {{noconf.tipo}}
+      </ion-item>
+
+      <ion-item>
+        Departamento: {{noconf.departamento}}
+      </ion-item>
+      <ion-item>
+        Descripción: {{noconf.descripcion}}
+      </ion-item>
+      <ion-item>
+        Causa: {{noconf.causa}}
+      </ion-item>
+      <ion-item>
+        Responsables: {{noconf.responsables}}
+      </ion-item>
+      <ion-item>
+        Seguimiento: {{noconf.seguimiento}}
+      </ion-item>
+  </ion-list>
+  
+</ion-content>
+
