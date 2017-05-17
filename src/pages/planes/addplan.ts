@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, ViewController } from 'ionic-angular';
+import { Users } from "../../providers/users";
+
 
 @IonicPage()
 @Component({
@@ -7,6 +9,8 @@ import { IonicPage, ViewController } from 'ionic-angular';
   templateUrl: 'addplan.html'
 })
 export class AddPlanPage {
+
+  users: any;
  
   fecha: any;
   alcance: any;
@@ -15,7 +19,16 @@ export class AddPlanPage {
   documentacion: any;
   sistematica: any;
  
-  constructor(public viewCtrl: ViewController) {
+  constructor(public viewCtrl: ViewController, public userService: Users) {
+ 
+  }
+
+  ionViewDidLoad(){
+ 
+    this.userService.getUsers().then((data) => {
+      console.log(data);
+      this.users = data;
+    });
  
   }
  

@@ -27,8 +27,10 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Responsable</ion-label>
-      <ion-input [(ngModel)]="responsable" type="text"></ion-input>
+      <ion-label>Responsable</ion-label>
+      <ion-select [(ngModel)]="responsable">
+        <ion-option *ngFor="let user of users" value= "{{user.username}}">{{user.username}}</ion-option>
+      </ion-select>
     </ion-item>
  
     <ion-item>
@@ -43,6 +45,6 @@
  
   </ion-list>
  
-  <button ion-button full color="secondary" (click)="save()">Guardar</button>
+  <button ion-button (click)="save()">Guardar</button>
  
 </ion-content>

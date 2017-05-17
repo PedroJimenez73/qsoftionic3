@@ -29,8 +29,10 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Responsable</ion-label>
-      <ion-input [(ngModel)]="plane.responsable" type="text"></ion-input>
+      <ion-label>Responsable</ion-label>
+      <ion-select [(ngModel)]="responsable">
+        <ion-option *ngFor="let user of users" value= "{{user.username}}">{{user.username}}</ion-option>
+      </ion-select>
     </ion-item>
  
     <ion-item>

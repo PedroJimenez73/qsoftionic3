@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title> Docs. de Procesos</ion-title>
+
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content center>
+ 
+    <ion-card *ngFor="let proceso of procesos" text-center>
+ 
+      <ion-card-header>
+  
+        <h1>{{proceso.nombre}}</h1>
+        
+  
+      </ion-card-header>
+      <ion-card-content>
+          <h2>Usuario Asignado: {{proceso.asignados}}</h2>
+          <h2>Revisión: {{proceso.revision}}</h2>
+          <h2>Situación: {{proceso.destino}}</h2>
+
+          <h2>Documento:
+            <a href="http://qualitysoft.firstbook.es{{proceso.word}}" onclick="window.open(this.href,'_self');">Descargar</a>
+          </h2>
+      </ion-card-content>
+ 
+
+    </ion-card>
+ 
+</ion-content>

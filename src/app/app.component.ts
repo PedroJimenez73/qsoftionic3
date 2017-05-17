@@ -3,9 +3,6 @@ import { Platform, Nav, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from "../pages/home/home";
-import { CursosPage } from "../pages/cursos/cursos";
-import { ProvesPage } from "../pages/provee/provees";
 
 
 @Component({
@@ -30,9 +27,7 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Inicio', component: HomePage },
-      { title: 'Formación' , component: CursosPage },
-      { title: 'Proveedores' , component: ProvesPage }
+      { title: 'Inicio', component: 'HomePage' }
     ];
   }
 

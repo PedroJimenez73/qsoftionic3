@@ -5,7 +5,7 @@
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-title> Legislación Mediomabiental</ion-title>
+    <ion-title> Docs. Externos</ion-title>
 
   </ion-navbar>
 
@@ -15,18 +15,18 @@
 
 <ion-content center>
  
-    <ion-card *ngFor="let doc of docs" text-center>
+    <ion-card *ngFor="let product of products" text-center>
  
       <ion-card-header>
   
-        <h1>Nombre: {{doc.nombre}}</h1>
+        <h1>{{product.nombre}}</h1>
         
   
       </ion-card-header>
       <ion-card-content>
-          <h2>Situación: {{doc.destino}}</h2>
+          <h2>Situación: {{product.destino}}</h2>
           <h2>Documento:
-            <a href="http://qualitysoft.firstbook.es{{doc.pdf}}" onclick="window.open(this.href,'_self');">Visualizar</a>
+            <a href="http://qualitysoft.firstbook.es{{product.image}}" onclick="window.open(this.href,'_self');">Visualizar</a>
           </h2>
       </ion-card-content>
  

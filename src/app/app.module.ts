@@ -26,6 +26,10 @@ import { RiesgosPage } from "../pages/riesgos/riesgos";
 import { Planes } from "../providers/planes";
 import { Docs } from "../providers/docs";
 import { Indicadores } from "../providers/indicadores";
+import { Users } from "../providers/users";
+import { Products } from "../providers/products";
+import { Internos } from "../providers/internos";
+import { Procesos } from "../providers/procesos";
 
 
 
@@ -83,6 +87,10 @@ const cloudSettings: CloudSettings = {
     Planes,
     Docs,
     Indicadores,
+    Users,
+    Products,
+    Internos,
+    Procesos,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     {

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { Planes } from "../../providers/planes";
+import { Users } from "../../providers/users";
 
 @IonicPage()
 @Component({
@@ -8,6 +9,8 @@ import { Planes } from "../../providers/planes";
   templateUrl: 'editplan.html'
 })
 export class EditPlanPage {
+
+  users: any;
  
   plane: any;
   _id: any;
@@ -18,16 +21,17 @@ export class EditPlanPage {
   documentacion: any;
   sistematica: any;
 
-  constructor(public nav: NavController, public planService: Planes, public navParams: NavParams, public viewCtrl: ViewController) {
+  constructor(public nav: NavController, public planService: Planes, public userService: Users, public navParams: NavParams, public viewCtrl: ViewController) {
      this.plane = navParams.get('plane');
-     /*this.curso.titulo = navParams.get('curso.titulo');
-     this.curso.organizador = navParams.get('curso.organizador');
-     this.curso.horas = navParams.get('curso.horas');
-     this.curso.asistentes = navParams.get('curso.asistentes');
-     this.curso.fechas = navParams.get('curso.fechas');
-     this.curso.observaciones = navParams.get('curso.observaciones');
-     this.curso.fechamodif = navParams.get('curso.fechamodif');*/
+  }
 
+  ionViewDidLoad(){
+ 
+    this.userService.getUsers().then((data) => {
+      console.log(data);
+      this.users = data;
+    });
+ 
   }
 
   save(): void {

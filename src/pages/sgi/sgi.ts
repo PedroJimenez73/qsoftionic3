@@ -12,9 +12,17 @@ export class SgiPage {
   constructor(public nav: NavController, public modalCtrl: ModalController) {
   
   }
-  /*goToRiesgos() {
-    this.nav.push(RiesgosPage);
-  }*/
+  goToExternos() {
+    this.nav.push('ExternosPage');
+  }
+
+  goToInternos() {
+    this.nav.push('InternosPage');
+  }
+  
+  goToProcesos() {
+    this.nav.push('ProcesosPage');
+  }
  
 
 
