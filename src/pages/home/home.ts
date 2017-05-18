@@ -95,4 +95,10 @@ export class HomePage {
   goToNoconfs() {
     this.nav.push('NoconfsPage');
   }
+  goToAcciones() {
+    this.nav.push('AccionesPage');
+  }
+  goToReg() {
+    this.nav.push('RegisterPage');
+  }
 }

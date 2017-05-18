@@ -1,0 +1,62 @@
+<ion-header>
+ <ion-toolbar hideBackButton>
+  <ion-title>Nueva Acción de Mejora</ion-title>
+  <ion-buttons end>
+    <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+  </ion-buttons>
+ </ion-toolbar>
+</ion-header>
+ 
+<ion-content>
+ 
+  <ion-list no-lines>
+ 
+    <ion-item>
+      <ion-label floating>Acción</ion-label>
+      <ion-input [(ngModel)]="accion" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>No Conf. Asociada</ion-label>
+      <ion-input [(ngModel)]="ncasoc" type="text" disabled></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Tipo</ion-label>
+        <ion-select [(ngModel)]="tipo">
+            <ion-option value="Acción Correctiva">Acción Correctiva</ion-option>
+            <ion-option value="Acción Preventiva">Acción Preventiva</ion-option>
+            <ion-option value="Acción de Mejora">Acción de Mejora</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Responsable</ion-label>
+      <ion-select [(ngModel)]="responsable">
+        <ion-option *ngFor="let user of users" value= "{{user.username}}">{{user.username}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Fecha</ion-label>
+      <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="fecha"></ion-datetime>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label floating>Tareas</ion-label>
+      <ion-input [(ngModel)]="tareas"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Seguimiento</ion-label>
+        <ion-select [(ngModel)]="seguimiento">
+            <ion-option value="Pendiente">Pendiente</ion-option>
+            <ion-option value="Cerrada">Cerrada</ion-option>
+        </ion-select>
+    </ion-item>
+  
+  </ion-list>
+ 
+  <button ion-button (click)="save()">Guardar</button>
+ 
+</ion-content>

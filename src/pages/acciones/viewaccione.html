@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>Detalles Acción</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+      <ion-item>
+        Acción: {{accione.accion}}
+      </ion-item>
+        <ion-item>
+        No Conf.: {{accione.ncasoc}}
+      </ion-item>
+      <ion-item>
+        Tipo: {{accione.tipo}}
+      </ion-item>
+
+      <ion-item>
+        Responsable: {{accione.responsable}}
+      </ion-item>
+      <ion-item>
+        Fecha: {{accione.fecha}}
+      </ion-item>
+      <ion-item>
+        Tareas: {{accione.tareas}}
+      </ion-item>
+      <ion-item>
+        Seguimiento: {{accione.seguimiento}}
+      </ion-item>
+  </ion-list>
+  
+</ion-content>
+

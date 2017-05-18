@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, LoadingController, Loading } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
-import { RegisterPage } from '../register/register';
 import { IonicPage } from 'ionic-angular';
 
 
@@ -18,10 +17,6 @@ export class LoginPage {
 
   constructor(private nav: NavController, private auth: AuthService, private alertCtrl: AlertController, private loadingCtrl: LoadingController) {}
 
-  // Push the registerPage
-  public createAccount() {
-    this.nav.push(RegisterPage);
-  }
 
   // Submit the login form, login the user with our provider and push Home page if successful
   public onSubmit() {
