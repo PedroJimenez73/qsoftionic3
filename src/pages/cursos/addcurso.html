@@ -7,47 +7,50 @@
  </ion-toolbar>
 </ion-header>
  
-<ion-content>
+<ion-content padding>
  
-  <ion-list no-lines>
+  <ion-list >
  
-    <ion-item>
-      <ion-label floating>Título</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Título</ion-label>
       <ion-input [(ngModel)]="titulo" type="text"></ion-input>
     </ion-item>
  
-    <ion-item>
-      <ion-label floating>Organizador</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Organizador</ion-label>
       <ion-input [(ngModel)]="organizador"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label floating>Horas</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Horas</ion-label>
       <ion-input [(ngModel)]="horas" type="text"></ion-input>
     </ion-item>
  
-    <ion-item>
-      <ion-label floating>Asistentes</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Asistentes</ion-label>
       <ion-input [(ngModel)]="asistentes"></ion-input>
     </ion-item>
 
-        <ion-item>
-      <ion-label floating>Fechas</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Fechas</ion-label>
       <ion-input [(ngModel)]="fechas" type="text"></ion-input>
     </ion-item>
  
-    <ion-item>
-      <ion-label floating>Observaciones</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Observaciones</ion-label>
       <ion-input [(ngModel)]="observaciones"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>Fecha Ult. Modif.</ion-label>
+      <ion-label stacked color="primary">Fecha Ult. Modif.</ion-label>
       <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="fechamodif"></ion-datetime>
     </ion-item>
  
  
   </ion-list>
  
-  <button ion-button (click)="save()">Guardar</button>
+<div text-center>
+    <button ion-button (click)="save()">Guardar</button>
+
+</div>
  
 </ion-content>

@@ -3,23 +3,17 @@ import { IonicPage, NavController, ModalController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-mapa',
-  templateUrl: 'mapa.html'
+  selector: 'page-necesidades',
+  templateUrl: 'necesidades.html'
 })
-export class MapaPage {
+export class NecesidadesPage {
 
  
   constructor(public nav: NavController, public modalCtrl: ModalController) {
   
   }
-  goToApoyo() {
-    this.nav.push('ApoyoPage');
-  }
-  goToPlanif() {
-    this.nav.push('PlanifPage');
-  }
-  goToNec() {
-    this.nav.push('NecesidadesPage');
+  goToProves() {
+    this.nav.push('ProvesPage');
   }
  
 

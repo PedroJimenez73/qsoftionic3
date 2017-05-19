@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { Proves } from "../../providers/proves";
- 
+
+@IonicPage()
 @Component({
   selector: 'page-editprove',
   templateUrl: 'editprove.html'

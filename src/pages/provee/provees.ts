@@ -1,11 +1,9 @@
 import { Component } from "@angular/core";
-import { NavController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController } from 'ionic-angular';
 import { Proves } from "../../providers/proves";
-import { ViewProvePage } from "./viewprove";
-import { AddProvePage } from "./addprove";
-import { EditProvePage } from "./editprove";
 
 
+@IonicPage()
 @Component({
   selector: 'page-provees',
   templateUrl: 'provees.html'
@@ -30,7 +28,7 @@ export class ProvesPage {
  
 
   viewProve(prove){
-    this.nav.push(ViewProvePage, {prove: prove});
+    this.nav.push('ViewProvePage', {prove: prove});
   }
 
 
@@ -38,7 +36,7 @@ export class ProvesPage {
 
   addProve(){
  
-    let modal = this.modalCtrl.create(AddProvePage);
+    let modal = this.modalCtrl.create('AddProvePage');
  
     modal.onDidDismiss(prove => {
       if(prove){
@@ -52,7 +50,7 @@ export class ProvesPage {
   }
 
   editProve(prove){
-    this.nav.push(EditProvePage, {prove: prove});
+    this.nav.push('EditProvePage', {prove: prove});
   }
 
 

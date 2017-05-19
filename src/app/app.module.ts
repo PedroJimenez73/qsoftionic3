@@ -16,10 +16,7 @@ import { HttpModule } from '@angular/http';
 import { Storage } from '@ionic/storage';
 
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
-import { ProvesPage } from "../pages/provee/provees";
-import { AddProvePage } from "../pages/provee/addprove";
-import { EditProvePage } from "../pages/provee/editprove";
-import { ViewProvePage } from "../pages/provee/viewprove";
+
 import { Proves } from "../providers/proves";
 import { Cursos } from "../providers/cursos";
 import { Planes } from "../providers/planes";
@@ -57,11 +54,7 @@ const cloudSettings: CloudSettings = {
 
 @NgModule({
   declarations: [
-    MyApp,
-    ProvesPage,
-    AddProvePage,
-    EditProvePage,
-    ViewProvePage
+    MyApp
   ],
   imports: [
     BrowserModule,
@@ -73,11 +66,7 @@ const cloudSettings: CloudSettings = {
   
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    ProvesPage,
-    AddProvePage,
-    EditProvePage,
-    ViewProvePage
+    MyApp
   ],
   providers: [
     StatusBar,
