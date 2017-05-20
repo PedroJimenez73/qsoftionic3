@@ -1,6 +1,5 @@
 <ion-header>
-  <ion-navbar hideBackButton>
-    <ion-title>Detalles Acción</ion-title>
+  <ion-navbar>
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -10,30 +9,38 @@
 </ion-header>
 
 <ion-content padding>
+      <div text-center>
+      <h2 text-wrap>Detalles Acción Mejora</h2>
+    </div>
   <ion-list>
-      <ion-item>
-        Acción: {{accione.accion}}
+      <ion-item text-wrap>
+        <p class="blue">Acción:</p> {{accione.accion}}
       </ion-item>
-        <ion-item>
-        No Conf.: {{accione.ncasoc}}
+        <ion-item text-wrap>
+        <p class="blue">No Conf.:</p> {{accione.ncasoc}}
       </ion-item>
-      <ion-item>
-        Tipo: {{accione.tipo}}
+      <ion-item text-wrap>
+        <p class="blue">Tipo:</p> {{accione.tipo}}
       </ion-item>
 
-      <ion-item>
-        Responsable: {{accione.responsable}}
+      <ion-item text-wrap>
+        <p class="blue">Responsable:</p> {{accione.responsable}}
       </ion-item>
-      <ion-item>
-        Fecha: {{accione.fecha}}
+      <ion-item text-wrap>
+        <p class="blue">Fecha:</p> {{accione.fecha}}
       </ion-item>
-      <ion-item>
-        Tareas: {{accione.tareas}}
+      <ion-item text-wrap>
+        <p class="blue">Tareas:</p> {{accione.tareas}}
       </ion-item>
-      <ion-item>
-        Seguimiento: {{accione.seguimiento}}
+      <ion-item text-wrap> 
+        <p class="blue">Seguimiento:</p> {{accione.seguimiento}}
       </ion-item>
   </ion-list>
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>
 

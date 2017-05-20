@@ -1,7 +1,6 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
-    <ion-title>Editar No Conformidad</ion-title>
+  <ion-navbar>
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -11,20 +10,23 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list no-lines>
+    <div text-center>
+      <h2 text-wrap>Editar No Conformidad</h2>
+    </div>
+  <ion-list>
     
     <ion-item>
-      <ion-label floating>Número</ion-label>
+      <ion-label stacked color="primary">Número</ion-label>
       <ion-input [(ngModel)]="noconf.numero" type="number"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Fecha</ion-label>
+      <ion-label stacked color="primary">Fecha</ion-label>
       <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="noconf.fecha"></ion-datetime>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Tipo</ion-label>
+      <ion-label stacked color="primary">Tipo</ion-label>
         <ion-select [(ngModel)]="noconf.tipo">
             <ion-option value="Real">Real</ion-option>
             <ion-option value="Potencial">Potencial</ion-option>
@@ -32,29 +34,29 @@
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Departamento</ion-label>
+      <ion-label stacked color="primary">Departamento</ion-label>
       <ion-input [(ngModel)]="noconf.departamento" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Descripción</ion-label>
+      <ion-label stacked color="primary">Descripción</ion-label>
       <ion-input [(ngModel)]="noconf.descripcion" type="text"></ion-input>
     </ion-item>
 
         <ion-item>
-      <ion-label floating>Causa</ion-label>
+      <ion-label stacked color="primary">Causa</ion-label>
       <ion-input [(ngModel)]="noconf.causa" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Responsables</ion-label>
+      <ion-label stacked color="primary">Responsables</ion-label>
       <ion-select [(ngModel)]="responsables">
         <ion-option *ngFor="let user of users" value= "{{user.username}}">{{user.username}}</ion-option>
       </ion-select>
     </ion-item>
 
      <ion-item>
-      <ion-label floating>Seguimiento</ion-label>
+      <ion-label stacked color="primary">Seguimiento</ion-label>
         <ion-select [(ngModel)]="noconf.seguimiento">
             <ion-option value="Pendiente">Pendiente</ion-option>
             <ion-option value="Cerrada">Cerrada</ion-option>
@@ -63,7 +65,14 @@
 
   
   </ion-list>
- 
+ <div text-center>
   <button ion-button (click)="save()">Guardar</button>
+ </div>
+
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

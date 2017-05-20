@@ -1,11 +1,10 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
+  <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-title> Docs. de Procesos</ion-title>
 
   </ion-navbar>
 
@@ -14,10 +13,13 @@
 
 
 <ion-content center>
+      <div text-center>
+      <h2 text-wrap>Documentos de Procesos</h2>
+    </div>
  
     <ion-card *ngFor="let proceso of procesos" text-center>
  
-      <ion-card-header>
+      <ion-card-header text-wrap>
   
         <h1>{{proceso.nombre}}</h1>
         
@@ -37,3 +39,8 @@
     </ion-card>
  
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

@@ -1,11 +1,9 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
+  <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-
-    <ion-title> Docs. Internos</ion-title>
 
   </ion-navbar>
 
@@ -14,10 +12,13 @@
 
 
 <ion-content center>
+    <div text-center>
+      <h2 text-wrap>Documentos Internos</h2>
+    </div>
  
     <ion-card *ngFor="let interno of internos" text-center>
  
-      <ion-card-header>
+      <ion-card-header text-wrap>
   
         <h1>{{interno.nombre}}</h1>
         
@@ -29,7 +30,7 @@
           <h2>Situación: {{interno.destino}}</h2>
 
           <h2>Documento:
-            <a href="http://qualitysoft.firstbook.es{{interno.pdf}}" onclick="window.open(this.href,'_self');">Visualizar</a>
+            <a href="http://qualitysoft.firstbook.es{{interno.pdf}}" onclick="window.open(this.href,'_self');">Descargar</a>
           </h2>
       </ion-card-content>
  
@@ -37,3 +38,8 @@
     </ion-card>
  
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

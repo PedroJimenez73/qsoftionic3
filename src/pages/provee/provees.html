@@ -1,11 +1,11 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
+  <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-title> Proveedores</ion-title>
+
     <ion-buttons end>
       <button ion-button icon-only (click)="addProve()"><ion-icon name="add"></ion-icon></button>
     </ion-buttons>
@@ -15,10 +15,13 @@
 </ion-header>
 
 <ion-content center>
+      <div text-center>
+      <h2 text-wrap>Proveedores</h2>
+    </div>
  
     <ion-card *ngFor="let prove of proves" text-center>
  
-      <ion-card-header>
+      <ion-card-header text-wrap>
   
         <h1>{{prove.nombre}}</h1>
   
@@ -33,3 +36,8 @@
     </ion-card>
  
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

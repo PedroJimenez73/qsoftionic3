@@ -1,6 +1,5 @@
 <ion-header>
-  <ion-navbar hideBackButton>
-    <ion-title>Detalles Indicador</ion-title>
+  <ion-navbar>
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -10,35 +9,43 @@
 </ion-header>
 
 <ion-content padding>
+    <div text-center>
+      <h2 text-wrap>Detalles Indicador</h2>
+    </div>
   <ion-list>
-      <ion-item>
-        Indicador: {{indicadore.indicador}}
+      <ion-item text-wrap>
+        <p class="blue">Indicador:</p> {{indicadore.indicador}}
       </ion-item>
-      <ion-item>
-        Riesgo: {{indicadore.riesgo}}
+      <ion-item text-wrap>
+        <p class="blue">Riesgo:</p> {{indicadore.riesgo}}
       </ion-item>
-      <ion-item>
-        Responsable: {{indicadore.responsable}}
+      <ion-item text-wrap>
+        <p class="blue">Responsable:</p> {{indicadore.responsable}}
       </ion-item>
-      <ion-item>
-        Formula: {{indicadore.formula}}
+      <ion-item text-wrap>
+        <p class="blue">Formula:</p> {{indicadore.formula}}
       </ion-item>
-      <ion-item>
-        Proceso: {{indicadore.proceso}}
+      <ion-item text-wrap>
+        <p class="blue">Proceso:</p> {{indicadore.proceso}}
       </ion-item>
-      <ion-item>
-        Superior: {{indicadore.superior}}
+      <ion-item text-wrap>
+        <p class="blue">Superior:</p> {{indicadore.superior}}
       </ion-item>
-      <ion-item>
-        Inferior: {{indicadore.inferior}}
+      <ion-item text-wrap>
+        <p class="blue">Inferior:</p> {{indicadore.inferior}}
       </ion-item>
-      <ion-item>
-        Inicio: {{indicadore.inicio}}
+      <ion-item text-wrap>
+        <p class="blue">Inicio:</p> {{indicadore.inicio}}
       </ion-item>      
-      <ion-item>
-        Fín: {{indicadore.fin}}
+      <ion-item text-wrap>
+        <p class="blue">Fín:</p> {{indicadore.fin}}
       </ion-item>
 
   </ion-list>
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

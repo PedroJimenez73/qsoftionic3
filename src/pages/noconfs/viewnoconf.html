@@ -1,6 +1,5 @@
 <ion-header>
-  <ion-navbar hideBackButton>
-    <ion-title>Detalles No Conformidad</ion-title>
+  <ion-navbar >
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -10,33 +9,41 @@
 </ion-header>
 
 <ion-content padding>
+    <div text-center>
+      <h2 text-wrap>Detalles No Conformidad</h2>
+    </div>
   <ion-list>
-      <ion-item>
-        Nº: {{noconf.numero}}
+      <ion-item text-wrap>
+        <p class="blue">Nº:</p> {{noconf.numero}}
       </ion-item>
-        <ion-item>
-        Fecha: {{noconf.fecha}}
+        <ion-item text-wrap>
+        <p class="blue">Fecha:</p> {{noconf.fecha}}
       </ion-item>
-      <ion-item>
-        Tipo: {{noconf.tipo}}
+      <ion-item text-wrap>
+        <p class="blue">Tipo:</p> {{noconf.tipo}}
       </ion-item>
 
-      <ion-item>
-        Departamento: {{noconf.departamento}}
+      <ion-item text-wrap>
+        <p class="blue">Departamento:</p> {{noconf.departamento}}
       </ion-item>
-      <ion-item>
-        Descripción: {{noconf.descripcion}}
+      <ion-item text-wrap>
+        <p class="blue">Descripción:</p> {{noconf.descripcion}}
       </ion-item>
-      <ion-item>
-        Causa: {{noconf.causa}}
+      <ion-item text-wrap>
+        <p class="blue">Causa:</p> {{noconf.causa}}
       </ion-item>
-      <ion-item>
-        Responsables: {{noconf.responsables}}
+      <ion-item text-wrap>
+        <p class="blue">Responsables:</p> {{noconf.responsables}}
       </ion-item>
-      <ion-item>
-        Seguimiento: {{noconf.seguimiento}}
+      <ion-item text-wrap>
+        <p class="blue">Seguimiento:</p> {{noconf.seguimiento}}
       </ion-item>
   </ion-list>
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>
 

@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-navbar hideBackButton>
-    <ion-title>Detalles Riesgo</ion-title>
+  <ion-navbar>
+
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -10,23 +10,31 @@
 </ion-header>
 
 <ion-content padding>
+    <div text-center>
+      <h2 text-wrap>Detalles Riesgo</h2>
+    </div>
   <ion-list>
-      <ion-item>
-        Proceso: {{riesgo.proceso}}
+      <ion-item text-wrap>
+        <p class="blue">Proceso:</p> {{riesgo.proceso}}
       </ion-item>
-      <ion-item>
-        Responsable: {{riesgo.responsable}}
+      <ion-item text-wrap>
+        <p class="blue">Responsable:</p> {{riesgo.responsable}}
       </ion-item>
-      <ion-item>
-        Riesgo: {{riesgo.riesgo}}
+      <ion-item text-wrap>
+        <p class="blue">Riesgo:</p> {{riesgo.riesgo}}
       </ion-item>
-      <ion-item>
-        Oportunidad: {{riesgo.oportunidad}}
+      <ion-item text-wrap>
+        <p class="blue">Oportunidad:</p> {{riesgo.oportunidad}}
       </ion-item>
-      <ion-item>
-        Control: {{riesgo.control}}
+      <ion-item text-wrap>
+        <p class="blue">Control:</p> {{riesgo.control}}
       </ion-item>
   </ion-list>
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>
 

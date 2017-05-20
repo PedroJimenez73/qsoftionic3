@@ -46,7 +46,7 @@ const cloudSettings: CloudSettings = {
 
 'core': {
 
-'app_id': '50a8b31f'
+'app_id': '0f1dbed9'
 
 }
 

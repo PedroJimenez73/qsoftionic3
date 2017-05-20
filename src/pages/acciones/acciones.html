@@ -1,11 +1,9 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
+  <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-
-    <ion-title> Acciones de Mejora</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="addAccione()"><ion-icon name="add"></ion-icon></button>
     </ion-buttons>
@@ -16,10 +14,13 @@
 
 
 <ion-content center>
+    <div text-center>
+      <h2 text-wrap>Acciones de Mejora</h2>
+    </div>
  
     <ion-card *ngFor="let accione of acciones" text-center>
  
-      <ion-card-header>
+      <ion-card-header text-wrap>
   
         <h1>{{accione.accion}}</h1>
   
@@ -34,3 +35,8 @@
     </ion-card>
  
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

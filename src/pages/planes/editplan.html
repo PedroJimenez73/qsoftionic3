@@ -1,7 +1,7 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
-    <ion-title>Editar Plan de Auditoría</ion-title>
+  <ion-navbar>
+
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -11,42 +11,52 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-list no-lines>
+    <div text-center>
+      <h2 text-wrap>Editar Plan de Auditoría</h2>
+    </div>
+  <ion-list>
  
     <ion-item>
-      <ion-label floating>Fecha</ion-label>
+      <ion-label stacked color="primary">Fecha</ion-label>
       <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="plane.fecha"></ion-datetime>
     </ion-item>
     
     <ion-item>
-      <ion-label floating>Alcance</ion-label>
+      <ion-label stacked color="primary">Alcance</ion-label>
       <ion-input [(ngModel)]="plane.alcance" type="text"></ion-input>
     </ion-item>
  
     <ion-item>
-      <ion-label floating>Objeto</ion-label>
+      <ion-label stacked color="primary">Objeto</ion-label>
       <ion-input [(ngModel)]="plane.objeto" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label>Responsable</ion-label>
+      <ion-label stacked color="primary">Responsable</ion-label>
       <ion-select [(ngModel)]="responsable">
         <ion-option *ngFor="let user of users" value= "{{user.username}}">{{user.username}}</ion-option>
       </ion-select>
     </ion-item>
  
     <ion-item>
-      <ion-label floating>Documentación</ion-label>
+      <ion-label stacked color="primary">Documentación</ion-label>
       <ion-input [(ngModel)]="plane.documentacion" type="text"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label floating>Sistemática</ion-label>
+      <ion-label stacked color="primary">Sistemática</ion-label>
       <ion-input [(ngModel)]="plane.sistematica" type="text"></ion-input>
     </ion-item>
   
   </ion-list>
- 
+ <div text-center>
   <button ion-button (click)="save()">Guardar</button>
+ </div>
+
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

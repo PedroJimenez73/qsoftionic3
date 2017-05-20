@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { IonicPage, NavController, ModalController } from 'ionic-angular';
-import { RiesgosPage } from "../riesgos/riesgos";
 
 @IonicPage()
 @Component({
@@ -14,7 +13,7 @@ export class PlanifPage {
   
   }
   goToRiesgos() {
-    this.nav.push(RiesgosPage);
+    this.nav.push('RiesgosPage');
   }
  
 

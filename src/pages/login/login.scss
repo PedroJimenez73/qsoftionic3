@@ -21,7 +21,6 @@ page-login {
      ion-item {
          border-radius: 0px !important;
          padding-left: 30px !important;
-         font-size: 0.9em;
          margin-bottom: 10px;
          border: 1px solid color($colors, light);;
          border-bottom: 0px !important;
@@ -44,13 +43,19 @@ page-login {
        border: 1px solid color($colors, light);
      }
 
-     .register-btn {
-       font-size: 0.8em;
-     }
+
   }
 
   .logoportada {
-    padding-top: 60px;
+    padding-top: 40px;
+  }
+
+  .logoeuropa {
+    padding-top: 20px;
+  }
+
+  .footerlogin {
+    color: white;
   }
 
   

@@ -1,6 +1,5 @@
 <ion-header>
-  <ion-navbar hideBackButton>
-    <ion-title>Editar Acción de Mejora</ion-title>
+  <ion-navbar>
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -8,47 +7,50 @@
 </ion-header>
 
 <ion-content padding>
+    <div text-center>
+      <h2 text-wrap>Editar Acción de Mejora</h2>
+    </div>
 
-<ion-list no-lines>
+<ion-list>
  
-    <ion-item>
-      <ion-label floating>Acción</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Acción</ion-label>
       <ion-input [(ngModel)]="accione.accion" type="text"></ion-input>
     </ion-item>
  
-    <ion-item>
-      <ion-label floating>No Conf. Asociada</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">No Conf. Asociada</ion-label>
       <ion-input [(ngModel)]="accione.ncasoc" type="text"></ion-input>
     </ion-item>
 
-    <ion-item>
-      <ion-label floating>Tipo</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Tipo</ion-label>
         <ion-select [(ngModel)]="accione.tipo">
             <ion-option value="Acción Correctiva">Acción Correctiva</ion-option>
             <ion-option value="Acción Preventiva">Acción Preventiva</ion-option>
             <ion-option value="Acción de Mejora">Acción de Mejora</ion-option>
         </ion-select>
-    </ion-item>
+    </ion-item >
 
-    <ion-item>
-      <ion-label>Responsable</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Responsable</ion-label>
       <ion-select [(ngModel)]="responsable">
         <ion-option *ngFor="let user of users" value= "{{user.username}}">{{user.username}}</ion-option>
       </ion-select>
     </ion-item>
 
-    <ion-item>
-      <ion-label floating>Fecha</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Fecha</ion-label>
       <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="accione.fecha"></ion-datetime>
     </ion-item>
  
-    <ion-item>
-      <ion-label floating>Tareas</ion-label>
+    <ion-item text-wrap>
+      <ion-label stacked color="primary">Tareas</ion-label>
       <ion-input [(ngModel)]="accione.tareas" type="text"></ion-input>
     </ion-item>
 
-     <ion-item>
-      <ion-label floating>Seguimiento</ion-label>
+     <ion-item text-wrap>
+      <ion-label stacked color="primary">Seguimiento</ion-label>
         <ion-select [(ngModel)]="accione.seguimiento">
             <ion-option value="Pendiente">Pendiente</ion-option>
             <ion-option value="Cerrada">Cerrada</ion-option>
@@ -56,9 +58,15 @@
     </ion-item>
   
   </ion-list>
- 
-  <button ion-button (click)="save()">Guardar</button>
+ <div text-center>
+     <button ion-button (click)="save()">Guardar</button>
+ </div>
     
  
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

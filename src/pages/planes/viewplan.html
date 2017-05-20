@@ -1,36 +1,41 @@
 <ion-header>
-  <ion-navbar hideBackButton>
-    <ion-title>Detalles Plan de Auditoría</ion-title>
+  <ion-navbar>
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
-
-
 </ion-header>
 
 <ion-content padding>
+    <div text-center>
+      <h2 text-wrap>Detalles Plan de Auditoría</h2>
+    </div>
   <ion-list>
-      <ion-item>
-        Fecha: {{plane.fecha}}
+      <ion-item text-wrap>
+        <p class="blue">Fecha:</p> {{plane.fecha}}
       </ion-item>
-      <ion-item>
-        Alcance: {{plane.alcance}}
+      <ion-item text-wrap>
+        <p class="blue">Alcance:</p> {{plane.alcance}}
       </ion-item>
-      <ion-item>
-        Objeto: {{plane.objeto}}
+      <ion-item text-wrap>
+        <p class="blue">Objeto:</p> {{plane.objeto}}
       </ion-item>
-      <ion-item>
-        Responsable: {{plane.responsable}}
+      <ion-item text-wrap>
+        <p class="blue">Responsable:</p> {{plane.responsable}}
       </ion-item>
-      <ion-item>
-        Documentación: {{plane.documentacion}}
+      <ion-item text-wrap>
+        <p class="blue">Documentación:</p> {{plane.documentacion}}
       </ion-item>
-      <ion-item>
-        Sistemática: {{plane.sistematica}}
+      <ion-item text-wrap>
+        <p class="blue">Sistemática:</p> {{plane.sistematica}}
       </ion-item>
 
   </ion-list>
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>
 

@@ -1,7 +1,6 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
-    <ion-title>Detalles Curso {{curso.titulo}}</ion-title>
+  <ion-navbar>
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -11,30 +10,38 @@
 </ion-header>
 
 <ion-content padding>
+    <div text-center>
+      <h2 text-wrap>Detalles Curso</h2>
+    </div>
   <ion-list>
-      <ion-item>
+      <ion-item text-wrap>
         <p class="blue">Título:</p> {{curso.titulo}}
       </ion-item>
-      <ion-item>
+      <ion-item text-wrap>
         <p class="blue">Organizador:</p> {{curso.organizador}}
       </ion-item>
-      <ion-item>
+      <ion-item text-wrap>
         <p class="blue">Horas:</p> {{curso.horas}}
       </ion-item>
-      <ion-item>
+      <ion-item text-wrap>
         <p class="blue">Asistentes:</p> {{curso.asistentes}}
       </ion-item>
-      <ion-item>
+      <ion-item text-wrap>
         <p class="blue">Fechas:</p> {{curso.fechas}}
       </ion-item>
-      <ion-item>
+      <ion-item text-wrap>
         <p class="blue">Observaciones:</p> {{curso.observaciones}}
       </ion-item>
-      <ion-item>
-        <p class="blue">Fecha Ult. Modif.:</p> {{curso.fechamodif}}
+      <ion-item text-wrap>
+        <p class="blue" displayFormat="DD MMM, YYYY">Fecha Ult. Modif.:</p> {{curso.fechamodif}}
       </ion-item>
 
   </ion-list>
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>
 

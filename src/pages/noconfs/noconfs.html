@@ -1,11 +1,10 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
+  <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-title> No Conformidades</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="addNoconf()"><ion-icon name="add"></ion-icon></button>
     </ion-buttons>
@@ -16,10 +15,13 @@
 
 
 <ion-content center>
+      <div text-center>
+      <h2 text-wrap>No Conformidades</h2>
+    </div>
  
     <ion-card *ngFor="let noconf of noconfs" text-center>
  
-      <ion-card-header>
+      <ion-card-header text-wrap>
         <h1>{{noconf.numero}}</h1>
         <h1>{{noconf.descripcion}}</h1>
   
@@ -34,3 +36,8 @@
     </ion-card>
  
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

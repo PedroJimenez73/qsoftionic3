@@ -1,7 +1,6 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
-    <ion-title>Editar Curso {{curso.titulo}}</ion-title>
+  <ion-navbar>
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -11,6 +10,9 @@
 </ion-header>
 
 <ion-content padding>
+      <div text-center>
+      <h2 text-wrap>Editar Curso</h2>
+    </div>
   <ion-list >
  
     <ion-item>
@@ -58,3 +60,8 @@
 
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

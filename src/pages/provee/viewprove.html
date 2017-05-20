@@ -1,7 +1,6 @@
 <ion-header>
 
-  <ion-navbar hideBackButton>
-    <ion-title>Detalles {{prove.nombre}}</ion-title>
+  <ion-navbar>
     <ion-buttons end>
       <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
@@ -11,42 +10,50 @@
 </ion-header>
 
 <ion-content padding>
+      <div text-center>
+      <h2 text-wrap>Detalles Proveedor</h2>
+    </div>
   <ion-list>
-      <ion-item>
-        Nombre: {{prove.nombre}}
+      <ion-item text-wrap>
+        <p class="blue">Nombre:</p> {{prove.nombre}}
       </ion-item>
-      <ion-item>
-        Producto/Servicio: {{prove.servicio}}
+      <ion-item text-wrap>
+        <p class="blue">Producto/Servicio:</p> {{prove.servicio}}
       </ion-item>
-      <ion-item>
-        CIF: {{prove.cif}}
+      <ion-item text-wrap>
+        <p class="blue">CIF:</p> {{prove.cif}}
       </ion-item>
-      <ion-item>
-        Dirección: {{prove.direccion}}
+      <ion-item text-wrap>
+        <p class="blue">Dirección:</p> {{prove.direccion}}
       </ion-item>
-      <ion-item>
-        Teléfono: {{prove.telefono}}
+      <ion-item text-wrap>
+        <p class="blue">Teléfono:</p> {{prove.telefono}}
       </ion-item>
-      <ion-item>
-        Persona de Contacto: {{prove.persona}}
+      <ion-item text-wrap>
+        <p class="blue">Persona de Contacto:</p> {{prove.persona}}
       </ion-item>
-      <ion-item>
-        Mail: {{prove.mail}}
+      <ion-item text-wrap>
+        <p class="blue">Mail:</p> {{prove.mail}}
       </ion-item>
-      <ion-item>
-        Forma de Pago: {{prove.pago}}
+      <ion-item text-wrap>
+        <p class="blue">Forma de Pago:</p> {{prove.pago}}
       </ion-item>
-      <ion-item>
-        No Conformidad: {{prove.nc}}
+      <ion-item text-wrap>
+        <p class="blue">No Conformidad:</p> {{prove.nc}}
       </ion-item>
-      <ion-item>
-        Eval./Reev.: {{prove.eval}}
+      <ion-item text-wrap>
+        <p class="blue">Eval./Reev.:</p> {{prove.eval}}
       </ion-item>
-      <ion-item>
-        Fecha Ult. Modif.: {{prove.fechamodif}}
+      <ion-item text-wrap>
+        <p class="blue">Fecha Ult. Modif.:</p> {{prove.fechamodif}}
       </ion-item>
 
   </ion-list>
   
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>
 

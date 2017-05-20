@@ -5,7 +5,6 @@
       <ion-icon name="menu"></ion-icon>
     </button>
 
-    <ion-title> Plan Formación</ion-title>
     <ion-buttons end>
       <button ion-button icon-only (click)="addCurso()"><ion-icon name="add"></ion-icon></button>
     </ion-buttons>
@@ -16,10 +15,13 @@
 
 
 <ion-content center>
+    <div text-center>
+      <h2 text-wrap>Plan de Formación</h2>
+    </div>
  
     <ion-card *ngFor="let curso of cursos" text-center>
  
-      <ion-card-header>
+      <ion-card-header text-wrap>
   
         <h1>{{curso.titulo}}</h1>
   
@@ -34,3 +36,8 @@
     </ion-card>
  
 </ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

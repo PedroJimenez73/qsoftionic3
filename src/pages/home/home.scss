@@ -40,9 +40,23 @@ page-home {
         background-color: #27a9e3;
         min-width: 70%;
     }
-    .white{
-        background-color: white;
-        color: white;
-        min-width: 70%;
+
+    .europa {
+        background-color: #2255a4;
+        padding-top: 15px;
+        margin-top: 20px;
+        margin-bottom: 0px !important;
     }
+    .grey{
+        padding-top: 10px;
+        background-color: grey;
+        color: white;
+    }
+    .greya{
+        background-color: grey;
+        color: grey;
+        text-decoration: none;
+    }
+
+
 }
