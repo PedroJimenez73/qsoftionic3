@@ -98,6 +98,9 @@ export class HomePage {
   goToAcciones() {
     this.nav.push('AccionesPage');
   }
+  goToClientes() {
+    this.nav.push('ClientesPage');
+  }
   goToReg() {
     this.nav.push('RegisterPage');
   }

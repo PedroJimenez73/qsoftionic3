@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+    <div text-center>
+      <h2 text-wrap>Detalles Cliente</h2>
+    </div>
+  <ion-list>
+      <ion-item text-wrap>
+        <p class="blue">Nombre:</p> {{cliente.nombre}}
+      </ion-item>
+      <ion-item text-wrap>
+        <p class="blue">CIF:</p> {{cliente.cif}}
+      </ion-item>
+      <ion-item text-wrap>
+        <p class="blue">Dirección:</p> {{cliente.direccion}}
+      </ion-item>
+      <ion-item text-wrap>
+        <p class="blue">Teléfono:</p> {{cliente.telefono}}
+      </ion-item>
+      <ion-item text-wrap>
+        <p class="blue">Persona de contacto:</p> {{cliente.persona}}
+      </ion-item>
+      <ion-item text-wrap>
+        <p class="blue">Email:</p> {{cliente.mail}}
+      </ion-item>
+
+  </ion-list>
+  
+</ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>
+

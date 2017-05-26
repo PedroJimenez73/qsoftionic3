@@ -29,6 +29,7 @@ import { Procesos } from "../providers/procesos";
 import { Riesgos } from "../providers/riesgos";
 import { Noconfs } from "../providers/noconfs";
 import { Acciones } from "../providers/acciones";
+import { Clientes } from "../providers/clientes";
 
 
 
@@ -83,6 +84,7 @@ const cloudSettings: CloudSettings = {
     Riesgos,
     Noconfs,
     Acciones,
+    Clientes,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     {

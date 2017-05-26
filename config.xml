@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.firstbookdev.softquality" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.firstbook.softquality" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>SoftQuality</name>
   <description>Gestión de Calidad y Medioambiente</description>
   <author email="info@firstbook.es" href="http://firstbook.es/">First Book S.L.</author>
