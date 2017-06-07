@@ -1,0 +1,60 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+    <div text-center>
+      <h2 text-wrap>Editar Reclamación de Cliente</h2>
+    </div>
+  <ion-list>
+    
+    <ion-item>
+      <ion-label stacked color="primary">Fecha</ion-label>
+      <ion-datetime displayFormat="DD MMM, YYYY" [(ngModel)]="reclama.fecha"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked color="primary">Cliente</ion-label>
+      <ion-select [(ngModel)]="reclama.cliente">
+        <ion-option *ngFor="let cliente of clientes" value= "{{cliente.nombre}}">{{cliente.nombre}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked color="primary">Departamento</ion-label>
+      <ion-input [(ngModel)]="reclama.departamento" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked color="primary">Descripción</ion-label>
+      <ion-input [(ngModel)]="reclama.descripcion" type="text"></ion-input>
+    </ion-item>
+
+     <ion-item>
+      <ion-label stacked color="primary">Seguimiento</ion-label>
+        <ion-select [(ngModel)]="reclama.seguimiento">
+            <ion-option value="Pendiente">Pendiente</ion-option>
+            <ion-option value="Cerrada">Cerrada</ion-option>
+        </ion-select>
+    </ion-item>
+
+  
+  </ion-list>
+ <div text-center>
+  <button ion-button (click)="save()">Guardar</button>
+ </div>
+
+  
+</ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

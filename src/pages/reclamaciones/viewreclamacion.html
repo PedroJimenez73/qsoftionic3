@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar >
+    <ion-buttons end>
+      <button ion-button icon-only (click)="close()"><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+<ion-content padding>
+    <div text-center>
+      <h2 text-wrap>Detalles Reclamación de Clientes</h2>
+    </div>
+  <ion-list>
+      <ion-item text-wrap>
+        <p class="blue">Fecha:</p> {{reclama.fecha}}
+      </ion-item>
+      <ion-item text-wrap>
+        <p class="blue">Cliente:</p> {{reclama.cliente}}
+      </ion-item>
+      <ion-item text-wrap>
+        <p class="blue">Departamento:</p> {{reclama.departamento}}
+      </ion-item>
+      <ion-item text-wrap>
+        <p class="blue">Descripción:</p> {{reclama.descripcion}}
+      </ion-item>
+      <ion-item text-wrap>
+        <p class="blue">Seguimiento:</p> {{reclama.seguimiento}}
+      </ion-item>
+  </ion-list>
+  
+</ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>
+

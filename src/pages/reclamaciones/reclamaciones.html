@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addReclama()"><ion-icon name="add"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content center>
+    <div text-center>
+      <h2 text-wrap>Reclamaciones de Clientes</h2>
+    </div>
+ 
+    <ion-card *ngFor="let reclama of reclamas" text-center>
+ 
+      <ion-card-header text-wrap>
+  
+        <h1>{{reclama.cliente}}</h1>
+  
+      </ion-card-header>
+      <ion-card-content>
+          <button ion-button icon-only (click)="viewReclama(reclama)"><ion-icon name="eye"></ion-icon></button>
+          <button ion-button icon-only color="secondary" (click)="editReclama(reclama)"><ion-icon name="paper"></ion-icon></button>
+          <button ion-button icon-only color="danger" (click)="deleteReclama(reclama)"><ion-icon name="trash"></ion-icon></button>
+      </ion-card-content>
+ 
+
+    </ion-card>
+ 
+</ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>

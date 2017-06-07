@@ -101,6 +101,9 @@ export class HomePage {
   goToClientes() {
     this.nav.push('ClientesPage');
   }
+  goToReclamaciones() {
+    this.nav.push('ReclamasPage');
+  }
   goToReg() {
     this.nav.push('RegisterPage');
   }
