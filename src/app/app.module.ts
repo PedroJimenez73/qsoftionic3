@@ -31,6 +31,7 @@ import { Noconfs } from "../providers/noconfs";
 import { Acciones } from "../providers/acciones";
 import { Clientes } from "../providers/clientes";
 import { Reclamas } from "../providers/reclamaciones";
+import { Manuales } from "../providers/manuales";
 
 
 
@@ -87,6 +88,7 @@ const cloudSettings: CloudSettings = {
     Acciones,
     Clientes,
     Reclamas,
+    Manuales,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     {

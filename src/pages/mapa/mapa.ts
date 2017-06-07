@@ -21,6 +21,12 @@ export class MapaPage {
   goToNec() {
     this.nav.push('NecesidadesPage');
   }
+  goToOrganizacion() {
+    this.nav.push('OrganizacionPage');
+  }
+    goToRequisitos() {
+    this.nav.push('RequisitosPage');
+  }
  
 
 
