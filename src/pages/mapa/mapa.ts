@@ -24,8 +24,14 @@ export class MapaPage {
   goToOrganizacion() {
     this.nav.push('OrganizacionPage');
   }
-    goToRequisitos() {
+  goToRequisitos() {
     this.nav.push('RequisitosPage');
+  }
+  goToMejora() {
+    this.nav.push('MejoraPage');
+  }
+  goToEval() {
+    this.nav.push('EvaluacionPage');
   }
  
 

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+     <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-buttons end>
+      <button ion-button (click)="logout()">
+        <ion-icon name="log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<div text-center>
+  <h2 text-wrap>Evaluación del Desempeño</h2>
+</div>
+<div text-center>
+  <button ion-button class="blue" (click)="goToPlanes()">Planes de Auditoría</button>
+</div>
+
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar text-center>
+    <p>© 2.017 First Book</p>
+  </ion-toolbar>
+</ion-footer>
